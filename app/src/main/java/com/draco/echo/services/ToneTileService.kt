@@ -1,7 +1,8 @@
-package com.draco.echo
+package com.draco.echo.services
 
 import android.service.quicksettings.Tile
 import android.service.quicksettings.TileService
+import com.draco.echo.utils.TonePlayer
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch

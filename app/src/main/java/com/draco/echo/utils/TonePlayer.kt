@@ -1,7 +1,8 @@
-package com.draco.echo
+package com.draco.echo.utils
 
 import android.content.Context
 import android.media.MediaPlayer
+import com.draco.echo.R
 import kotlinx.coroutines.delay
 
 class TonePlayer(context: Context) {
