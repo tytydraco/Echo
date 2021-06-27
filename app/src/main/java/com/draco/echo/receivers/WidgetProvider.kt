@@ -7,7 +7,7 @@ import android.content.Context
 import android.content.Intent
 import android.widget.RemoteViews
 import com.draco.echo.R
-import com.draco.echo.utils.TonePlayer
+import com.draco.echo.utils.TonePlayerSingleton
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -48,7 +48,7 @@ class WidgetProvider : AppWidgetProvider() {
     override fun onReceive(context: Context, intent: Intent) {
         if (intent.action == INTENT_ACTION_PLAY_TONE) {
             GlobalScope.launch(Dispatchers.IO) {
-                TonePlayer(context).play()
+                TonePlayerSingleton.play(context)
             }
         }
         super.onReceive(context, intent)
