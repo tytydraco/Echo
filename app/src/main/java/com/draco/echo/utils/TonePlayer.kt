@@ -30,5 +30,8 @@ class TonePlayer(context: Context) {
 
         /* Wait for tone to finish */
         delay(mediaPlayer.duration.toLong())
+
+        /* Release memory */
+        mediaPlayer.release()
     }
 }
